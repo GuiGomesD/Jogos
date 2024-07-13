@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Organizador de Palavras</title>
+</head>
+<body>
+    <main>
+        <div class="night">
+
+            <div class="nome">
+                <h1>Cata palavras</h1>
+            </div>
+
+            <div class="startContainer">
+                <div class="descricao">
+                    <video src="/Midia/videos/demonstracaoV2.mp4" autoplay muted loop></video>
+                    <div class="explicacao">
+                        <p>Encontre as letras corretas que preenchem os espaços e forme a maior quantidade de palavras que conseguir dentro de 1 minuto.</p>
+                    </div>
+                </div>
+
+                <div class="themeSelector">
+                    <label for="theme">Escolha um tema:</label>
+                    <select id="theme">
+                        <option value="programacao">Programação</option>
+                        <option value="animais">Animais</option>
+                        <option value="frutas">Frutas</option>
+                        <option value="paises">Países</option>
+                    </select>
+                </div>
+
+                <div class="playContainer" onclick="start()">
+                    <div class="center">
+                      <button class="btn">
+                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                        </svg>
+                        <span>COMEÇAR</span>
+                      </button>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="container">
+                <div class="themeDisplay" style="display: none;">
+                    <h2 id="selectedTheme">Tema: </h2>
+                </div>
+                <div id="countdown" class="countdown" style="display: none;">Tempo: 60s</div>
+                <div class="sentenceBox" style="display: none;"></div>
+                <div class="hintContainer" style="display: none;">
+                    <button class="btnHint" onclick="useHint()">Usar Dica</button>
+                </div>
+                <div class="words" style="display: none;">
+                    <div class="grid">
+                        <div class="tecla" id="Q" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">Q</div>
+                        <div class="tecla" id="W" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">W</div>
+                        <div class="tecla" id="E" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">E</div>
+                        <div class="tecla" id="R" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">R</div>
+                        <div class="tecla" id="T" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">T</div>
+                        <div class="tecla" id="Y" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">Y</div>
+                        <div class="tecla" id="U" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">U</div>
+                        <div class="tecla" id="I" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">I</div>
+                        <div class="tecla" id="O" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">O</div>
+                        <div class="tecla" id="P" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">P</div>
+                        <div class="tecla" id="A" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">A</div>
+                        <div class="tecla" id="S" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">S</div>
+                        <div class="tecla" id="D" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">D</div>
+                        <div class="tecla" id="F" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">F</div>
+                        <div class="tecla" id="G" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">G</div>
+                        <div class="tecla" id="H" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">H</div>
+                        <div class="tecla" id="J" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">J</div>
+                        <div class="tecla" id="K" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">K</div>
+                        <div class="tecla" id="L" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">L</div>
+                        <div class="tecla" id="Z" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">Z</div>
+                        <div class="tecla" id="X" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">X</div>
+                        <div class="tecla" id="C" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">C</div>
+                        <div class="tecla" id="V" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">V</div>
+                        <div class="tecla" id="B" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">B</div>
+                        <div class="tecla" id="N" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">N</div>
+                        <div class="tecla" id="M" onmouseenter="teclaHover()" draggable="true" ondragstart="drag(event)">M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
