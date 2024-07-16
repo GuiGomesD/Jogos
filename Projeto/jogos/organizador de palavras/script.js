@@ -230,7 +230,7 @@ function useHint() {
         return;
     }
 
-    const maxHints = Math.ceil(word.length / 3); // Defina quantas letras quer revelar (exemplo: um terço da palavra)
+    const maxHints = Math.ceil(word.length / 3); // Define quantas letras quer revelar (exemplo: um terço da palavra)
     const indicesToReveal = [];
 
     for (let i = 0; i < word.length; i++) {
